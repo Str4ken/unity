@@ -36,7 +36,7 @@ Click "Email/Password" and "Google" (not yet) and enable it.
 
 Add `ios/Runner/GoogleService-Info.plist` for iOS.
 
-Search everywhere for `com.YOUR_COMPANY_NAME.YOUR_PROJECT_NAME` and replace with yours.
+Search everywhere for `com.example.unity` and replace with yours.
 
 
 
@@ -60,7 +60,7 @@ For iOS search for `YOUR_GOOGLE_MAPS_API_KEY` in `ios/Runner/AppDelegate.swift`.
 
 ### Double check
 
-The project_number `683044187809` and the package name `com.mibin.unity` should be replaced by your information.
+Package name `com.example.unity` should be replaced by your information.
 
 After entering the credentials run `git update-index --skip-worktree android/app/src/main/AndroidManifest.xml ios/Runner/AppDelegate.swift secrets.json` to tell git that changes in these files will not be tracked anymore.
 
