@@ -51,7 +51,10 @@ Enable Google Maps API `https://console.cloud.google.com/google/maps-apis`.
 
 Under APIs & Services -> Credentials -> Create credentials -> API key -> Get Api Key
 
-Edit `secrets.json`.
+Create a `secrets.json` file in root level of project with following content:
+
+`{"google_maps_api_key": "YOUR_GOOGLE_MAPS_API_KEY"}`
+
 
 For Android search for `YOUR_GOOGLE_MAPS_API_KEY` in `android/app/src/main/AndroidManifest.xml`.
 
