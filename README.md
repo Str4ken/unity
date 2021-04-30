@@ -36,7 +36,7 @@ Click "Email/Password" and "Google" (not yet) and enable it.
 
 Add `ios/Runner/GoogleService-Info.plist` for iOS.
 
-Search everywhere for `com.example.unity` and replace with yours.
+Search everywhere for `com.bin.unitybeta` and replace with yours.
 
 
 
@@ -63,9 +63,11 @@ For iOS search for `YOUR_GOOGLE_MAPS_API_KEY` in `ios/Runner/AppDelegate.swift`.
 
 ### Double check
 
-Package name `com.example.unity` should be replaced by your information.
+Package name `com.bin.unitybeta` should be replaced by your information.
 
-After entering the credentials run `git update-index --skip-worktree android/app/src/main/AndroidManifest.xml ios/Runner/AppDelegate.swift secrets.json` to tell git that changes in these files will not be tracked anymore.
+After entering the credentials run `git update-index --skip-worktree android/app/src/main/AndroidManifest.xml ios/Runner/AppDelegate.swift` to tell git that changes in these files will not be tracked anymore.
+
+If there is a need for tracked changes in these files `git update-index --no-skip-worktree android/app/src/main/AndroidManifest.xml ios/Runner/AppDelegate.swift`
 
 ### Tech Stack
 
