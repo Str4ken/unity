@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marquee/marquee.dart';
 import 'package:unity/constants.dart';
 import 'package:unity/screens/login_screen.dart';
+import 'package:unity/screens/sessions_list_screen.dart';
 import 'package:unity/screens/signup_screen.dart';
 import 'package:unity/widgets/background.dart';
 import 'package:unity/widgets/unity_title.dart';
@@ -44,42 +45,51 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 100),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: RaisedButton(
-                          color: Theme.of(context).primaryColor,
-                          elevation: uDefaultElevation,
-                          shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(uDefaultBorderRadius),
-                          ),
-                          onPressed: () => Navigator.of(context)
-                              .pushNamed(LoginScreen.routeName),
-                          child: Text(
-                            'Login',
-                            style: TextStyle(fontSize: 18),
-                          )),
-                    ),
-                    SizedBox(
-                      width: uDefaultPadding,
-                    ),
-                    Expanded(
-                      child: RaisedButton(
-                          color: Theme.of(context).primaryColor,
-                          elevation: uDefaultElevation,
-                          shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(uDefaultBorderRadius),
-                          ),
-                          onPressed: () => Navigator.of(context)
-                              .pushNamed(SignupScreen.routeName),
-                          child:
-                              Text('Sign Up', style: TextStyle(fontSize: 18))),
-                    )
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Expanded(
+                //       child: RaisedButton(
+                //           color: Theme.of(context).primaryColor,
+                //           elevation: uDefaultElevation,
+                //           shape: RoundedRectangleBorder(
+                //             borderRadius:
+                //                 BorderRadius.circular(uDefaultBorderRadius),
+                //           ),
+                //           onPressed: () => Navigator.of(context)
+                //               .pushNamed(LoginScreen.routeName),
+                //           child: Text(
+                //             'Login',
+                //             style: TextStyle(fontSize: 18),
+                //           )),
+                //     ),
+                //     SizedBox(
+                //       width: uDefaultPadding,
+                //     ),
+                //     Expanded(
+                //       child: RaisedButton(
+                //           color: Theme.of(context).primaryColor,
+                //           elevation: uDefaultElevation,
+                //           shape: RoundedRectangleBorder(
+                //             borderRadius:
+                //                 BorderRadius.circular(uDefaultBorderRadius),
+                //           ),
+                //           onPressed: () => Navigator.of(context)
+                //               .pushNamed(SignupScreen.routeName),
+                //           child:
+                //               Text('Sign Up', style: TextStyle(fontSize: 18))),
+                //     )
+                //   ],
+                // ),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.of(context)
+                        .pushNamed(SessionsListScreen.routeName);
+                  },
+                  icon: Icon(Icons.search),
+                  label: Text('Find session'),
+                  style: ButtonStyle(),
+                )
               ],
             ),
           )
